@@ -3,7 +3,7 @@ class ForecastController < ApplicationController
     @lat = params.fetch("user_latitude")
     @lng = params.fetch("user_longitude")
 
-    key = ENV.fetch("DARK_SKY_KEY")
+    key = ENV.fetch("DARK_SKY_API_KEY")
 
     api_url = "https://api.darksky.net/forecast/"+ key + "/" + @lat + "," +  @lng
     
